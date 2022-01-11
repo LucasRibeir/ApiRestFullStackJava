@@ -43,10 +43,18 @@ public class EmployeeController {
 			return new ResponseEntity<Employee>(HttpStatus.NOT_FOUND);
 			
 		}
+	
+		@PostMapping("/employee/save")
+		public void save(@RequestBody Employee e) {
+			 service.save(e);
+		}
+		
+	
+	
 	}
 	
 	
-	
+
 	@PutMapping("/employee/update/{id}")
 	public ResponseEntity<?> update(@RequestBody Employee e, @PathVariable Long id){
 	
