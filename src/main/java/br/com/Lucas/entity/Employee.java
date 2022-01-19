@@ -1,4 +1,4 @@
-package br.com.Lucas.entity;
+ package br.com.Lucas.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

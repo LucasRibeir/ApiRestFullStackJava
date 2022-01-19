@@ -55,11 +55,15 @@ public class EmployeeController {
 
 	
 	@PutMapping("/employee/update/{id}")
-	public ResponseEntity<?> update(@RequestBody Employee e, @PathVariable Long id) {
+	public ResponseEntity<?> update(@RequestBody Employee up, @PathVariable Long id) {
 
 		try {
-			Employee employeeExist = service.get(id);
-			service.save(e);
+			Employee employee = service.get(id);
+			
+			employee.setEmailId(up.getEmailId());
+		    employee.setLastName(up.getLastName());
+		    employee.setFirstName(up.getFirstName());
+			service.save(employee);
 
 			return new ResponseEntity<>(HttpStatus.OK);
 		} catch (NoSuchElementException ex) {

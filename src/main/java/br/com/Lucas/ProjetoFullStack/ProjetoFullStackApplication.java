@@ -1,4 +1,4 @@
-package br.com.Lucas.ProjetoFullStack;
+ package br.com.Lucas.ProjetoFullStack;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
