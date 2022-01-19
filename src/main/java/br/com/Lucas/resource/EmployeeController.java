@@ -53,7 +53,7 @@ public class EmployeeController {
 		service.delete(id);
 	}
 
-	
+	// Update Employee
 	@PutMapping("/employee/update/{id}")
 	public ResponseEntity<?> update(@RequestBody Employee up, @PathVariable Long id) {
 
