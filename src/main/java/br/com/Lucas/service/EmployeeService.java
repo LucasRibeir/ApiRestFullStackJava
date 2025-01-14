@@ -10,26 +10,22 @@ import br.com.Lucas.repository.EmployeeRepository;
 
 @Service
 public class EmployeeService {
-
 	@Autowired
-
-	private EmployeeRepository repo;
+	private EmployeeRepository repository;
 
 	public List<Employee> listAll() {
-		return repo.findAll();
+		return repository.findAll();
 	}
 
 	public void save(Employee e) {
-		repo.save(e);
+		repository.save(e);
 	}
 
 	public void delete(Long id) {
-		repo.deleteById(id);
-
+		repository.deleteById(id);
 	}
 
 	public Employee get(Long id) {
-		return repo.findById(id).get();
-		
+		return repository.findById(id).get();
 	}
 }
